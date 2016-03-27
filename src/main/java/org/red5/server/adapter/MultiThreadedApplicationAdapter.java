@@ -1192,6 +1192,60 @@ public class MultiThreadedApplicationAdapter extends StatefulScopeWrappingAdapte
      */
     public void FCSubscribe(String streamName) {
     }
+    
+    /**
+     * Notification method that is sent by some clients just before playback stops.
+     * 
+     * @param streamName
+     *            Name of stream for which playback is about to be stopped.
+     */
+    public void FCUnSubscribe(String streamName) {
+    }
+    
+    /**
+     * Notification method that is sent by FME just before starting a DVR stream publish.
+     * 
+     * @param streamName
+     *            Name of stream that is about to be published.
+     */
+    public void releaseStream(String streamName) {
+    }
+    
+    /**
+     * Notification method that is sent by RTMP clients who want to subscribe to a DVR Stream.
+     * 
+     * @param streamName
+     *            Name of DVR stream that is about to be played.
+     */
+    public void DVRSubscribe(String streamName) {
+    }
+    
+    /**
+     * Notification method that is sent by RTMP clients who want to un-subscribe from a  DVR Stream.
+     * 
+     * @param streamName
+     *            Name of DVR stream that is to be un-subscribed from
+     */
+    public void DVRUnSubscribe(String streamName) {
+    }
+    
+    /**
+     * Notification method that is sent by FME to set info about a DVR Stream
+     * 
+     * @param streamInfo
+     *            A DVR stream info object containing stream name and various other properties about the publishing DVR stream
+     */
+    public void DVRSetStreamInfo(Object streamInfo) {
+    }
+    
+    /**
+     * Method used by DVR subscribing clients to get info about the DVR Stream.
+     * 
+     * @param streamInfo
+     *            Name of DVR stream for which information is required.
+     */
+    public void DVRGetStreamInfo(String streamName) {
+    }
 
     /**
      * Notification that a broadcasting stream is closing.
